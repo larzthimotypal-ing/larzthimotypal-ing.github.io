@@ -1,0 +1,44 @@
+.hero-container{
+    width: 100%;
+    #hero{
+        width: 100%;
+        transform:scale(1.1)
+    }
+
+    #wave{
+        position: relative;
+        animation-name: wave-front;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    #boat{
+        position: relative;
+        animation-name: boat;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    #bottom-clip{
+        fill: var(--body--bg-color);
+    }
+
+}
+
+@keyframes wave-front{
+    0% {transform: translateX(0);  animation-timing-function: ease-out;}
+    20% {transform: translateX(-3%);  animation-timing-function: ease-out;}
+    40% {transform: translateX(0);  animation-timing-function: ease-out;}
+    60% {transform: translateX(-6%);  animation-timing-function: ease-out;}
+    80% {transform: translateX(-3%);  animation-timing-function: ease-out;}
+    100% {transform: translateX(0);  animation-timing-function: ease-out;}
+}
+
+@keyframes boat{
+    0% {transform: translateX(0) rotate(0) translateY(0);  animation-timing-function: ease-out;}
+    20% {transform: translateX(5%) rotate(-4deg) translateY(7.3%);  animation-timing-function: ease-out;}
+    40% {transform: translateX(4%) rotate(1deg) translateY(-1%);  animation-timing-function: ease-out;}
+    60% {transform: translateX(1%) rotate(1deg) translateY(-1%);  animation-timing-function: ease-out;}
+    80% {transform: translateX(2%) rotate(-3deg) translateY(6%);  animation-timing-function: ease-out;}
+    100% {transform: translateX(0) rotate(0) translateY(0);  animation-timing-function: ease-out;}
+}
