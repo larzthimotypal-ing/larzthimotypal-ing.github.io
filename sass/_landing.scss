@@ -7,7 +7,7 @@
 
     #wave{
         position: relative;
-        animation-name: wave-front;
+        animation-name: wave-front-mob;
         animation-duration: 15s;
         animation-iteration-count: infinite;
     }
@@ -25,20 +25,39 @@
 
 }
 
-@keyframes wave-front{
+@media screen and (min-width: 768px)
+{
+    .hero-container{
+        #wave{
+            animation-name: wave-front-pc;
+        }
+    }
+}
+
+
+@keyframes wave-front-pc{
     0% {transform: translateX(0);  animation-timing-function: ease-in-out;}
-    20% {transform: translateX(-3%);  animation-timing-function: ease-in-out;}
-    40% {transform: translateX(0);  animation-timing-function: ease-in-out;}
-    60% {transform: translateX(-6%);  animation-timing-function: ease-in-out;}
-    80% {transform: translateX(-3%);  animation-timing-function: ease-in-out;}
+    10% {transform: translateX(-3%);  animation-timing-function: ease-in-out;}
+    35% {transform: translateX(0);  animation-timing-function: ease-in-out;}
+    60% {transform: translateX(-9%);  animation-timing-function: ease-in-out;}
+    85% {transform: translateX(-3%);  animation-timing-function: ease-in-out;}
+    100% {transform: translateX(0);  animation-timing-function: ease-in-out;}
+}
+
+@keyframes wave-front-mob{
+    0% {transform: translateX(0);  animation-timing-function: ease-in-out;}
+    10% {transform: translateX(-10%);  animation-timing-function: ease-in-out;}
+    35% {transform: translateX(0);  animation-timing-function: ease-in-out;}
+    60% {transform: translateX(-20%);  animation-timing-function: ease-in-out;}
+    85% {transform: translateX(-10%);  animation-timing-function: ease-in-out;}
     100% {transform: translateX(0);  animation-timing-function: ease-in-out;}
 }
 
 @keyframes boat{
     0% {transform: translateX(0) rotate(0) translateY(0);  animation-timing-function: ease-in-out;}
-    20% {transform: translateX(5%) rotate(-4deg) translateY(7.3%);  animation-timing-function: ease-in-out;}
-    40% {transform: translateX(4%) rotate(1deg) translateY(-1%);  animation-timing-function: ease-in-out;}
-    60% {transform: translateX(1%) rotate(1deg) translateY(-1%);  animation-timing-function: ease-in-out;}
-    80% {transform: translateX(2%) rotate(-3deg) translateY(6%);  animation-timing-function: ease-in-out;}
+    15% {transform: translateX(4%) rotate(-7deg) translateY(13%);  animation-timing-function: ease-in-out;}
+    40% {transform: translateX(3%) rotate(3deg) translateY(-4%);  animation-timing-function: ease-in-out;}
+    65% {transform: translateX(-3%) rotate(7deg) translateY(-10%);  animation-timing-function: ease-in-out;}
+    90% {transform: translateX(-1%) rotate(-4deg) translateY(7.4%);  animation-timing-function: ease-in-out;}
     100% {transform: translateX(0) rotate(0) translateY(0);  animation-timing-function: ease-in-out;}
 }
